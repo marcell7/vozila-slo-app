@@ -74,7 +74,7 @@ function App() {
             if (localDb) {
                 try {
                     let dataInLocalDb = await dexieDb.files.get(LOCAL_DATA_VER);
-                    if (dataInLocalDb.dataset == LOCAL_DATA_VER) {
+                    if (dataInLocalDb.dataset === LOCAL_DATA_VER) {
                         _exists = true;
                     }
                 } catch (e) {

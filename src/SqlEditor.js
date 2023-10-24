@@ -1,10 +1,10 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback } from 'react';
 import CodeMirror, { placeholder } from "@uiw/react-codemirror";
 import { StandardSQL } from '@codemirror/lang-sql';
 
 
 const SqlEditor = ({ sqlQuery, setSqlQuery }) => {
-    const onChange = useCallback((val, viewUpdate) => {
+    const onChange = useCallback((val) => {
         setSqlQuery(val);
     });
 
