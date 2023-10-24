@@ -22,7 +22,6 @@ export const init = async (duckdb) => {
 export const createTable = async (db, local_data_ver) => {
     const installedData = await dexieDb.files.get(local_data_ver);
     if (installedData) {
-        console.log("Creating a blob");
         let blob = installedData.data;
         await db.registerFileBuffer(
             "data.parquet",
@@ -40,7 +39,6 @@ export const initDb = async () => {
 
 export const query = async (con, query) => {
     const res = await con.query(query);
-    console.log(res);
     const cols = res.schema.fields.map((field) => field.name);
     const data = res.toArray().map((row) => row.toArray());
     return { cols: cols, data: data };
