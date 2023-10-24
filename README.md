@@ -1,0 +1,1 @@
+# vozila-slo-query-app
