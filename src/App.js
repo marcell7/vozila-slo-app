@@ -137,7 +137,7 @@ function App() {
                                 <span className="pt-4 text-xs text-gray-600">
                                     by{" "}
                                     <a href="https://marcell7.github.io/ThePage/" className="font-bold underline">
-                                        @Marcel Lah
+                                        @marcel
                                     </a>
                                 </span>
                             </div>
