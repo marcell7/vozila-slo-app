@@ -13,16 +13,16 @@ const QueryOutput = ({ result }) => {
                         <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                             <thead>
                                 <tr>
-                                    {result.cols.map(col => (
-                                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">{col}</th>
+                                    {result.cols.map((col, colIdx) => (
+                                        <th key={colIdx} scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">{col}</th>
                                     ))}
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
                                 {resultToRender.map((row, rowIdx) => (
                                     <tr key={rowIdx}>
-                                        {row.map((col, colIdx) => (
-                                            <td key={colIdx} className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">{col == null ? col : col.toString()}</td>
+                                        {row.map((cell, cellIdx) => (
+                                            <td key={cellIdx} className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">{cell == null ? cell : cell.toString()}</td>
                                         ))}
                                     </tr>
                                 ))}
