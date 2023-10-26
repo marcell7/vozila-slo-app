@@ -14,7 +14,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 
-const DATA_URL = "https://media.githubusercontent.com/media/marcell7/vozila-slo-data/main/dataset/dataset_v1.parquet";
+const DATA_URL = "https://media.githubusercontent.com/media/marcell7/vozila-slo-podatki/main/data/dataset_v1.parquet";
 const LOCAL_DATA_VER = "dataset_v1";
 const DEFAULT_SQL_QUERY = "SELECT * FROM 'data.parquet' LIMIT 5"
 
