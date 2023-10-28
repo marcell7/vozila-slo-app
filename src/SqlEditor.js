@@ -10,7 +10,7 @@ const SqlEditor = ({ sqlQuery, setSqlQuery }) => {
 
     return (
         <div>
-            <CodeMirror value={sqlQuery} height="200px" extensions={[StandardSQL, placeholder("SELECT * FROM dataset")]} onChange={onChange} />
+            <CodeMirror value={sqlQuery} height="200px" extensions={[StandardSQL, placeholder("SELECT * FROM 'data.parquet' LIMIT 5")]} onChange={onChange} />
         </div>
     );
 }
