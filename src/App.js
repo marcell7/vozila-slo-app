@@ -130,7 +130,7 @@ function App() {
                                     pišeš v SQL. Baza, ki jo preneseš, se shrani v brskalnik, zato je potrebno ob prvem prenosu počakati ~1min.
                                     Povezavo do baze najdeš <a href="https://github.com/marcell7/vozila-slo-podatki/tree/main/data" className="underline font-bold">tukaj</a>. V istem repozitoriju je tudi skripta, ki je bila uporabljena za pripravo podatkov.
                                 </p>
-                                <p className="text-sm text-gray-600 text-justify"><b>Opomba:</b> V bazi je samo kategorija m1 od leta 2016 do 2022. To pomeni, da če je avtomobil bil v evidenci v vseh letih od 2016-2022, potem je v bazi zapisan 7x. Vsak zapis za določeno leto (to je označeno v stolpcu leto_zapisa).</p>
+                                <p className="text-sm text-gray-600 text-justify"><b>Opomba:</b> V bazi sta samo kategoriji M1 in M1G (osebni avtomobili) od leta 2016 do 2022. To pomeni, da če je avtomobil bil v evidenci v vseh letih od 2016-2022, potem je v bazi zapisan 7x. Vsak zapis za določeno leto (to je označeno v stolpcu leto_zapisa).</p>
                                 <p className="text-sm text-gray-600"><b>Vir:</b> Prvotni vir podatkov je spletna stran OPSI (https://podatki.gov.si/)</p>
                             </div>
                             <div className="flex items-end">
