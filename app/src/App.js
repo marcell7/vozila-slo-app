@@ -115,7 +115,7 @@ function App() {
 
             <div className="relative z-10">
                 <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 mt-20 lg:py-12">
-                    <div className="mb-5">
+                    <div className="mb-8">
                         <div className="mt-5 max-w-2xl">
                             <h1 className="block font-semibold text-gray-800 text-lg md:text-xl lg:text-2xl">
                                 Registrirani avtomobili v Sloveniji
@@ -125,12 +125,9 @@ function App() {
                         <div className="flex flex-row justify-between">
                             <div className="mt-2 mr-5 max-w-3xl">
                                 <p className="mb-3 text-sm text-gray-600 text-justify">
-                                    Tukaj lahko pišeš in poganjaš poizvedbe po
-                                    bazi registriranih avtomobilov. Poizvedbe
-                                    pišeš v SQL. Baza, ki jo preneseš, se shrani v brskalnik, zato je potrebno ob prvem prenosu počakati ~1min.
-                                    Povezavo do baze najdeš <a href="https://github.com/marcell7/vozila-slo-podatki/tree/main/data" className="underline font-bold">tukaj</a>. V istem repozitoriju je tudi skripta, ki je bila uporabljena za pripravo podatkov.
+                                    To je spletna aplikacija za analiziranje in izvažanje podatkov o vseh registriranih avtomobilih in njihovi zgodovini v Sloveniji.
+                                    Vsa navodila in informacije najdeš tukaj <a href="https://github.com/marcell7/vozila-slo-app" className="font-bold">tukaj</a>
                                 </p>
-                                <p className="text-sm text-gray-600 text-justify"><b>Opomba:</b> V bazi sta samo kategoriji M1 in M1G (osebni avtomobili) od leta 2016 do 2022. To pomeni, da če je avtomobil bil v evidenci v vseh letih od 2016-2022, potem je v bazi zapisan 7x. Vsak zapis za določeno leto (to je označeno v stolpcu leto_zapisa).</p>
                                 <p className="text-sm text-gray-600"><b>Vir:</b> Prvotni vir podatkov je spletna stran OPSI (https://podatki.gov.si/)</p>
                             </div>
                             <div className="flex items-end">
