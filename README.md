@@ -1,12 +1,12 @@
 # Registrirani avtomobili v Sloveniji 🚗
 
-
 ## Kaj je to?
 
 To je spletna aplikacija za analiziranje in izvažanje podatkov o vseh registriranih avtomobilih in njihovi zgodovini v Sloveniji.
+
 Povezava: https://vozila-slo-app.netlify.app/
 
-![Screenshot]()
+![Screenshot](screenshot.png)
 
 ## Kako?
 
@@ -40,6 +40,6 @@ ORDER BY leto_zapisa DESC;
 
 Več o tem zakaj sem tole naredil sem napisal [tukaj](https://medium.com/@marcel.lah/podatki-o-registriranih-vozilih-v-sloveniji-b8651bcf7f19).
 
-### \* Kako zbrisati podatke iz brskalnika?
+#### \* Kako zbrisati podatke iz brskalnika?
 
 [Na kratko je napisano tukaj](https://www.howtogeek.com/664912/how-to-clear-storage-and-site-data-for-a-single-site-on-google-chrome/)
