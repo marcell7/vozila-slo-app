@@ -1,10 +1,12 @@
 # Registrirani avtomobili v Sloveniji 🚗
 
+
 ## Kaj je to?
 
 To je spletna aplikacija za analiziranje in izvažanje podatkov o vseh registriranih avtomobilih in njihovi zgodovini v Sloveniji.
+Povezava: https://vozila-slo-app.netlify.app/
 
-![Screenshot](screenshot.png)
+![Screenshot]()
 
 ## Kako?
 
