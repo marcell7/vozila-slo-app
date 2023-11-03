@@ -126,7 +126,7 @@ function App() {
                             <div className="mt-2 mr-5 max-w-3xl">
                                 <p className="mb-3 text-sm text-gray-600 text-justify">
                                     To je spletna aplikacija za analiziranje in izvažanje podatkov o vseh registriranih avtomobilih in njihovi zgodovini v Sloveniji.
-                                    Vsa navodila in informacije najdeš tukaj <a href="https://github.com/marcell7/vozila-slo-app" className="font-bold">tukaj</a>
+                                    Vsa navodila in informacije najdeš <a href="https://github.com/marcell7/vozila-slo-app" className="underline font-bold">tukaj.</a>
                                 </p>
                                 <p className="text-sm text-gray-600"><b>Vir:</b> Prvotni vir podatkov je spletna stran OPSI (https://podatki.gov.si/)</p>
                             </div>
