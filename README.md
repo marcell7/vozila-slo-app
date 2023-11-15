@@ -2,7 +2,7 @@
 
 ## Kaj je to?
 
-To je spletna aplikacija za analiziranje in izvažanje podatkov o vseh registriranih avtomobilih in njihovi zgodovini v Sloveniji.
+To je spletna aplikacija za analiziranje in izvažanje podatkov o vseh registriranih avtomobilih in njihovi zgodovini.
 
 Povezava: https://vozila-slo-app.netlify.app/
 
@@ -38,7 +38,7 @@ ORDER BY leto_zapisa DESC;
 
 ## Zakaj?
 
-Več o tem zakaj sem tole naredil sem napisal [tukaj](https://medium.com/@marcel.lah/podatki-o-registriranih-vozilih-v-sloveniji-b8651bcf7f19).
+Več o tem, zakaj sem tole naredil, sem napisal [tukaj](https://medium.com/@marcel.lah/podatki-o-registriranih-vozilih-v-sloveniji-b8651bcf7f19).
 
 #### \* Kako zbrisati podatke iz brskalnika?
 
