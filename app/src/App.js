@@ -145,36 +145,33 @@ function App() {
                     <div className="flex flex-row justify-between my-5 gap-2">
                         <button
                             type="button"
-                            className="w-1/3 py-3 px-4 py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle active:hover:bg-gray-50 focus:outline-none transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800 disabled:opacity-75"
+                            className="w-1/3 py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle active:hover:bg-gray-50 focus:outline-none transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800 disabled:opacity-75"
                             onClick={onInstallDataClick}
                             disabled={
                                 loading | isDataInstalling | isQueryRunning
                             }
                         >
-                            {dataFinishedInstalling
-                                ? "Baza je uspešno shranjena. Ponovno prenesi?"
-                                : "Prenesi celotno bazo"}
-                            {isDataInstalling ? (
+
+                            {isDataInstalling && (
                                 <span
-                                    className="ml-3 animate-spin inline-block w-4 h-4 border-[3px] border-current border-t-transparent text-gray-700 rounded-full"
+                                    className="ml-3 mr-2 animate-spin inline-block w-4 h-4 border-[3px] border-current border-t-transparent text-gray-700 rounded-full"
                                     role="status"
                                     aria-label="loading"
                                 ></span>
-                            ) : (
-                                !dataFinishedInstalling && (
-                                    <CloudArrowDownIcon className="w-5 h-5 text-blue-500" />
-                                )
                             )}
+                            {dataFinishedInstalling
+                                ? "Baza je uspešno shranjena. Ponovno prenesi?"
+                                : "Prenesi celotno bazo"}
                         </button>
                         <button
                             type="button"
-                            className="py-3 px-4 py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle active:hover:bg-gray-50 transition-all text-sm disabled:opacity-75"
+                            className="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle active:hover:bg-gray-50 transition-all text-sm disabled:opacity-75"
                             onClick={() => { onRunSqlQueryClick(con, sqlQuery) }}
                             disabled={
                                 loading | isQueryRunning | isDataInstalling | !dataFinishedInstalling
                             }
                         >
-                            Poženi
+
                             {isQueryRunning ? (
                                 <span
                                     className="ml-3 animate-spin inline-block w-4 h-4 border-[3px] border-current border-t-transparent text-gray-700 rounded-full"
@@ -184,6 +181,7 @@ function App() {
                             ) : (
                                 <PlayIcon className="w-5 h-5 text-green-500" />
                             )}
+                            Poženi
                         </button>
                     </div>
                     {isDataInstalling && (
@@ -199,20 +197,26 @@ function App() {
                         </div>
                     )}
                     {dataFinishedInstalling &&
-                        <div className="p-5 border-1 border-gray-200 shadow-md bg-white rounded-lg mt-20 border">
-                            <div className="flex flex-row justify-normal gap-2 mb-5">
-
-                                <button
-                                    type="button"
-                                    className="px-4 py-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 transition-all text-sm"
-                                    onClick={() => {
-                                        downloadCSV(result);
-                                    }}
-                                >
-                                    <ArrowDownTrayIcon className="w-5 h-5" />
-                                </button>
-                                {queryError && <span className="px-4 py-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-red-500 shadow-sm align-middle text-sm">Error: {queryError}</span>}
+                        <div className="px-5 py-2 border-1 border-gray-200 shadow-md bg-white rounded-lg mt-10 border">
+                            <div className="flex flex-row justify-between mt-4 mb-2 items-center">
+                                <div className="space-x-2">
+                                    <button
+                                        type="button"
+                                        className="px-3 py-2 inline-flex justify-center items-center rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 transition-all text-sm"
+                                        onClick={() => {
+                                            downloadCSV(result);
+                                        }}
+                                    >
+                                        <ArrowDownTrayIcon className="w-5 h-5 mr-2" />
+                                        Prenesi
+                                    </button>
+                                    {queryError && <span className="px-3 py-2 inline-flex justify-center items-center rounded-md border font-medium bg-white text-red-500 shadow-sm align-middle text-sm">Error: {queryError}</span>}
+                                </div>
+                                <div className="flex justify-end text-sm">
+                                    <span className="px-3 py-2 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle text-sm">N: {result.data.length} </span>
+                                </div>
                             </div>
+                            <span className="mb-2 flex justify-end text-gray-400 text-xs">Spodaj je prikazanih max. 50 vrstic, prenesene pa bodo vse</span>
                             <QueryOutput result={result} />
                         </div>
                     }

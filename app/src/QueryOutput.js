@@ -10,11 +10,12 @@ const QueryOutput = ({ result }) => {
             <div className="-m-1.5 overflow-x-auto">
                 <div className="p-1.5 min-w-full inline-block align-middle">
                     <div className="border overflow-hidden dark:border-gray-700 rounded-lg">
+
                         <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                            <thead>
+                            <thead className="bg-blue-50">
                                 <tr>
                                     {result.cols.map((col, colIdx) => (
-                                        <th key={colIdx} scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">{col}</th>
+                                        <th key={colIdx} scope="col" className="px-4 py-1 text-left text-xs font-medium text-gray-500 uppercase">{col}</th>
                                     ))}
                                 </tr>
                             </thead>
@@ -31,6 +32,7 @@ const QueryOutput = ({ result }) => {
                     </div>
                 </div>
             </div>
+
         </div>
     );
 }
