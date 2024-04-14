@@ -116,9 +116,9 @@ function App() {
             <div className="relative z-10">
                 <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 mt-20 lg:py-12">
                     <div className="mb-8">
-                        <div className="mt-5 max-w-2xl">
+                        <div className="flex space-x-2 mt-5 max-w-2xl items-center">
                             <h1 className="block font-semibold text-gray-800 text-lg md:text-xl lg:text-2xl">
-                                Registrirani avtomobili v Sloveniji
+                                Avtomobili v Sloveniji
                             </h1>
                         </div>
 
@@ -126,14 +126,14 @@ function App() {
                             <div className="mt-2 mr-5 max-w-3xl">
                                 <p className="mb-3 text-sm text-gray-600 text-justify">
                                     To je spletna aplikacija za analiziranje in izvažanje podatkov o vseh registriranih avtomobilih in njihovi zgodovini v Sloveniji.
-                                    Vsa navodila in informacije najdeš <a href="https://github.com/marcell7/vozila-slo-app" className="underline font-bold">tukaj.</a>
+                                    Vsa navodila in informacije najdeš <a href="https://github.com/marcell7/vozila-slo-app/blob/main/README.md" target="_blank" rel="noopener noreferrer" className="underline font-bold">tukaj.</a>
                                 </p>
                                 <p className="text-sm text-gray-600"><b>Vir:</b> Prvotni vir podatkov je spletna stran OPSI (https://podatki.gov.si/)</p>
                             </div>
                             <div className="flex items-end">
                                 <span className="pt-4 text-xs text-gray-600">
                                     by{" "}
-                                    <a href="https://marcell7.github.io/ThePage/" className="font-bold underline">
+                                    <a href="https://marcellah.xyz" target="_blank" rel="noopener noreferrer" className="font-bold underline">
                                         @marcel
                                     </a>
                                 </span>
