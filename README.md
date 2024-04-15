@@ -18,7 +18,7 @@ Prvotni vir podatkov je spletna stran [OPSI](https://podatki.gov.si/)
 
 ## Primeri SQL poizvedb
 
-Ime tabele, po kateri lahko delamo poizvedbe je `data.parquet`. Tabela vsebuje očiščene podatke o registriranih vozilih od leta 2016 dalje. Kot je že zgoraj napisano, je pomembno, da vemo, da je vsak avto v tabeli lahko zabeležen večkrat.
+Ime tabele, po kateri lahko delamo poizvedbe je `data.parquet`. Tabela vsebuje očiščene podatke o registriranih vozilih od leta 2016 dalje. Kot je že zgoraj napisano, je pomembno, da vemo, da je lahko vsak avto v tabeli zabeležen večkrat.
 
 Poglejmo si kar na primeru. Če poženem poizvedbo;
 
@@ -35,7 +35,7 @@ dobim rezultat:
 | xxxxxxxxxxxxxxxxx | ... | 2018 |
 | xxxxxxxxxxxxxxxxx | ... | 2019 |
 
-To pomeni, da je bil avto z vin **xxxxxxxxxxxxxxxxx** registriran v letih 2016, 2017, 2018 in 2019. To je pomembno zato, ker v primeru, da želimo narediti določeno statistiko npr. za leto 2019, moram k naši poizvedbi vedno dodati:
+To pomeni, da je bil avto z vin **xxxxxxxxxxxxxxxxx** registriran v letih 2016, 2017, 2018 in 2019. To je pomembno zato, ker v primeru, da želim narediti določeno statistiko npr. za leto 2019, moram k poizvedbi vedno dodati:
 
 ```sql
 WHERE leto_zapisa = 2019 --oz. katero drugo leto, ki nas zanima
@@ -50,7 +50,7 @@ SELECT * FROM 'data.parquet'
 WHERE gorivo = 'ni goriva' AND znamka = 'volkswagen';
 ```
 
-ne bom dobil pravilnega odgovora, kajti v tej poizvedbi, se lahko isti avto pojavi večkrat, zaradi zgoraj omenjenega dejstva.
+ne bom dobil pravilnega odgovora, kajti v tej poizvedbi se lahko isti avto pojavi večkrat zaradi zgoraj omenjenega dejstva.
 
 ---
 
